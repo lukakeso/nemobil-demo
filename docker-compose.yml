@@ -1,0 +1,30 @@
+services:
+  frontend:
+    build:
+      context: ./frontend        # 👈 Set the context to the frontend folder
+      dockerfile: ../Dockerfile.frontend  # 👈 Path to Dockerfile from within ./my-app
+    ports:
+      - "${FRONTEND_PORT}:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    image: nemobil-demo-frontend:latest
+    environment:
+      - VITE_API_URL=http://localhost:${BACKEND_PORT}
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend  # Name the backend Dockerfile as needed
+    ports:
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+    restart: unless-stopped
+    image: nemobil-demo-backend:latest
+    environment:
+      - BACKEND_PORT=${BACKEND_PORT}
+      - CLIENT_ID=${CLIENT_ID}
+      - CLIENT_SECRET=${CLIENT_SECRET}
+      - GRANT_TYPE=${GRANT_TYPE}
+      - SCOPE=${SCOPE}
+      - USERNAME=${USERNAME}
+      - PASSWORD=${PASSWORD}

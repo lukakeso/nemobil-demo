@@ -1,0 +1,155 @@
+:root {
+  --nemo-navy: #071B54;
+  --nemo-light-blue: #00B2E9;
+  --nemo-mid-blue: #0060A4;
+  --nemo-pink: #D82B5B;
+  --nemo-light-bg: #EFF2F5;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #071B54;
+  background-color: #EFF2F5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #071B54;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #00b3e9df;
+  border-color: #00b3e9df; /* Tailwind's border-blue-500 */
+  outline: none;
+  box-shadow: 0 0 0 3px #00b3e9df; /* focus:ring-blue-500 */
+}
+
+body {
+  margin: 0;
+  min-width: 400px;
+  min-height: 100vh;
+  text-align: center; /* center text horizontally */
+  /* Remove flex properties */
+  /* display: flex; */
+  place-items: center;
+  padding-top: 2rem; /* some space from top */
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #071B54;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  margin-right: 1rem; /* Adds space after every button */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* Optional: remove margin from the last button */
+button:last-child {
+  margin-right: 0;
+}
+button:hover {
+  border-color: #00B2E9;
+}
+button:focus,
+button:focus-visible {
+  border-color: #00b3e9df; /* Tailwind's border-blue-500 */
+  outline: none;
+  box-shadow: 0 0 0 3px #00b3e9df; /* focus:ring-blue-500 */
+}
+
+
+.time-button {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 0.25rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #071B54;
+  cursor: pointer;
+  margin-right: 1rem; /* Adds space after every button */
+  /*display: flex;*/
+  align-items: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  vertical-align: middle;
+  /*margin-top: 0px; /* tweak as needed */
+  /*box-sizing: border-box;    /* ensure padding doesn’t inflate height */
+}
+/* Optional: remove margin from the last button */
+.time-button:last-child {
+  margin-right: 0;
+}
+.time-button:hover {
+  border-color: #00B2E9;
+}
+.time-button:focus,
+.time-button:focus-visible {
+  border-color: #00b3e9df; /* Tailwind's border-blue-500 */
+  outline: none;
+  box-shadow: 0 0 0 3px #00b3e9df; /* focus:ring-blue-500 */
+}
+
+
+
+.confirm-button {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 0.1rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #071B54;
+  cursor: pointer;
+  margin-right: 1rem; /* Adds space after every button */
+  /*display: flex;*/
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 0px; /* tweak as needed */
+  /*box-sizing: border-box;    /* ensure padding doesn’t inflate height */
+}
+/* Optional: remove margin from the last button */
+.confirm-button:last-child {
+  margin-right: 0;
+}
+.confirm-button:hover {
+  border-color: #00B2E9;
+}
+.confirm-button:focus,
+.confirm-button:focus-visible {
+  border-color: #00b3e9df; /* Tailwind's border-blue-500 */
+  outline: none;
+  box-shadow: 0 0 0 3px #00b3e9df; /* focus:ring-blue-500 */
+}
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

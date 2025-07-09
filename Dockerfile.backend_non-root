@@ -1,0 +1,23 @@
+FROM node:20
+
+# Create a non-root user and group
+RUN groupadd -r appgroup && useradd -r -g appgroup appuser
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files and source code
+COPY backend/package*.json ./
+RUN npm install
+COPY backend/ .
+
+# Change ownership so the non-root user can access files
+RUN chown -R appuser:appgroup /app
+
+# Switch to non-root user
+USER appuser
+
+# Expose backend port (optional, but recommended)
+# EXPOSE 3001
+
+CMD ["node", "server.js"]

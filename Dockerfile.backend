@@ -1,0 +1,16 @@
+FROM node:20
+
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY backend/package*.json ./
+RUN npm install
+
+# Copy backend source code
+COPY backend/ .
+
+# # Expose backend port
+# EXPOSE 3001
+
+CMD ["node", "server.js"]
