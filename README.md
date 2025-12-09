@@ -24,3 +24,5 @@ To use the website locally with docker use `docker-compose build` in the reposit
 The website should be available on `http://localhost:${FRONTEND_PORT}`
 
 
+![demo-video](assets/demo.gif)
+
